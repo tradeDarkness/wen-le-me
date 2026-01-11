@@ -1,0 +1,167 @@
+/* Global Font & Background */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;800&display=swap');
+
+/* Force Light Theme Colors override */
+:root {
+    --text-color: #1a1a1a;
+    --background-color: #ffffff;
+    --secondary-background-color: #f8f9fa;
+    --primary-color: #6366f1;
+}
+
+.stApp {
+    background: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Outfit', sans-serif;
+}
+
+h1,
+h2,
+h3,
+p,
+span,
+div {
+    color: var(--text-color);
+}
+
+/* Sidebar Timeline Styling */
+[data-testid="stSidebar"] {
+    background-color: #f8f9fa;
+    border-right: 1px solid #eee;
+}
+
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3,
+[data-testid="stSidebar"] span,
+[data-testid="stSidebar"] div {
+    color: #333 !important;
+}
+
+.timeline-item {
+    padding-left: 20px;
+    border-left: 2px solid #ddd;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #bbb;
+    border: 2px solid #f8f9fa;
+}
+
+.timeline-date {
+    font-size: 0.8rem;
+    color: #888 !important;
+    margin-bottom: 4px;
+}
+
+/* Pet Avatar Customization */
+.pet-container {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.pet-emoji {
+    font-size: 8rem;
+    margin-bottom: 5px;
+    cursor: default;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* --- INPUT STYLING --- */
+/* Target the inner input element specifically */
+.stTextInput input {
+    background-color: #f0f2f6 !important;
+    /* Slightly darker gray for visibility */
+    color: #000 !important;
+    /* Force black text */
+    border: 1px solid #ccc !important;
+    border-radius: 8px !important;
+    padding: 10px 12px !important;
+    caret-color: #000 !important;
+    /* Cursor color */
+}
+
+.stTextInput input::placeholder {
+    color: #666 !important;
+}
+
+.stTextInput input:focus {
+    border-color: #6366f1 !important;
+    background-color: #fff !important;
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2) !important;
+}
+
+/* --- BUTTON STYLING (Examples & Feed) --- */
+/* General Button Reset */
+.stButton button {
+    background-color: #f0f2f6 !important;
+    color: #1f2937 !important;
+    /* Dark gray text */
+    border: 1px solid #d1d5db !important;
+    border-radius: 8px !important;
+    transition: all 0.2s;
+    font-weight: 500 !important;
+}
+
+.stButton button:hover {
+    background-color: #fff !important;
+    border-color: #6366f1 !important;
+    /* Indigo border on hover */
+    color: #6366f1 !important;
+    /* Indigo text on hover */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+}
+
+.stButton button:active {
+    background-color: #e5e7eb !important;
+    transform: translateY(1px);
+}
+
+/* Specific Tweak for the Example Buttons Layout */
+.example-btn-row .stButton button {
+    text-align: left !important;
+    justify-content: flex-start !important;
+    height: auto !important;
+    padding: 10px 14px !important;
+    white-space: normal !important;
+}
+
+/* Feed Button - Make it Primary Color */
+[data-testid="stForm"] .stButton button {
+    background-color: #6366f1 !important;
+    color: #ffffff !important;
+    border: none !important;
+}
+
+[data-testid="stForm"] .stButton button:hover {
+    background-color: #4f46e5 !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3) !important;
+}
+
+/* Progress Bar */
+.stProgress>div>div>div>div {
+    background-image: linear-gradient(90deg, #3b82f6, #6366f1);
+}
+
+/* Hide Streamlit Elements */
+#MainMenu {
+    visibility: hidden;
+}
+
+footer {
+    visibility: hidden;
+}
+
+header {
+    visibility: hidden;
+}
